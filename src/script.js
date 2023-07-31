@@ -47,8 +47,8 @@ for (let i = 0; i < 1000; i++) {
  */
 const textureLoader = new THREE.TextureLoader()
 
-const matcapTextureShape = textureLoader.load('/textures/matcaps/5.png')
-const matcapTextureText = textureLoader.load('/textures/matcaps/8.png')
+// const matcapTextureShape = textureLoader.load('/textures/matcaps/3.png')
+// const matcapTextureText = textureLoader.load('/textures/matcaps/3.png')
 
 /**
  * Fonts
@@ -116,6 +116,7 @@ fontLoader.load(
         developerIntroductionGeometry.center()
         hobbyIntroductionGeometry.center()
         const textMaterial = new THREE.MeshNormalMaterial()
+        // const textMaterial = new THREE.MeshMatcapMaterial()
         // textMaterial.matcap = matcapTextureText
         const myNameText = new THREE.Mesh(myNameGeometry, textMaterial)
         const developerIntroductionText = new THREE.Mesh(developerIntroductionGeometry, textMaterial)
@@ -181,6 +182,7 @@ fontLoader.load(
 
         const donutGeometry = new THREE.TorusGeometry(0.3, 0.2, 20, 45)
         const shapeMaterial = new THREE.MeshNormalMaterial()
+        // const shapeMaterial = new THREE.MeshMatcapMaterial()
         // shapeMaterial.matcap = matcapTextureShape
 
         for (let i = 0; i < 50; i++) {
